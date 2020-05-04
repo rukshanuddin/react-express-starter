@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SMSForm from './SMSForm';
 
 class App extends Component {
   constructor(props) {
@@ -24,33 +25,16 @@ class App extends Component {
       .then(state => this.setState(state));
   }
 
-  render() {
+    render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
+          <h1>Text Me!</h1>
+          <p>This is a really basic form to send me an SMS. I followed a tutorial on the Twilio blog and tweaked it so it sends me a text message from my Twilio trial number. I built it in about 5 minutes with instructions from the tutorial.
           </p>
-          <form onSubmit={this.handleSubmit}>
-            <label htmlFor="name">Enter your name: </label>
-            <input
-              id="name"
-              type="text"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
-            <button type="submit">Submit</button>
-          </form>
-          <p>{this.state.greeting}</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <br></br>
+          <p><strong>I would love an opportunity at Twilio to learn and grow as a developer.<br/>Thank you for your consideration.</strong></p>
+          <SMSForm />
         </header>
       </div>
     );
