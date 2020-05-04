@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import me from './me.jpg';
 import './App.css';
 import SMSForm from './SMSForm';
 
@@ -30,7 +30,8 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>Text Me!</h1>
-          <p>This is a really basic form to send me an SMS. I followed a tutorial on the Twilio blog and tweaked it so it sends me a text message from my Twilio trial number. I built it in about 5 minutes with instructions from the tutorial.
+          <img src={me} alt="me" />
+          <p>This is a really basic form to send me an SMS. I followed a tutorial on the Twilio blog and tweaked it so it sends a text message from my Twilio trial number, with my number as a default value. I built it in about 5 minutes with instructions from the tutorial.
           </p>
           <br></br>
           <p><strong>I would love an opportunity at Twilio to learn and grow as a developer.<br/>Thank you for your consideration.</strong></p>

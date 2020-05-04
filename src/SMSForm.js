@@ -6,7 +6,7 @@ class SMSForm extends Component {
     super(props);
     this.state = {
       message: {
-        to: '',
+        to: '+13472217972',
         body: ''
       },
       submitting: false,
@@ -65,8 +65,10 @@ class SMSForm extends Component {
              type="tel"
              name="to"
              id="to"
-             style={{display: 'none'}}
-             value="+13472217972"
+             
+             value={this.state.message.to}
+             
+             onChange={this.onHandleChange}
           />
         </div>
         <div>
